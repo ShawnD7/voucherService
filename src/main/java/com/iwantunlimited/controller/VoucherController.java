@@ -35,13 +35,12 @@ public class VoucherController {
 	
 	@PostMapping("voucher/redeem")
 	public VoucherModel redeem(@RequestBody VoucherModel codeObject) {
-		try {
-			return service.redeem(codeObject);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return null;
+		
+			 VoucherModel model =	service.redeem(codeObject);
+			 System.out.println("VoucherModel => "+ model);
+			 return model;
+		
+		
 	}
 }
 	

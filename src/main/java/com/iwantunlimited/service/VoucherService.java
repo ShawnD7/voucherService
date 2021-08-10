@@ -79,8 +79,8 @@ public class VoucherService {
 		}
 		else {
 			selected.setUser(true);
-			template.save(selected);
-			return selected;
+			return template.save(selected);
+			
 		}
 		
 	}
