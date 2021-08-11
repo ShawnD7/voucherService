@@ -7,8 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 public class VoucherModel {
-	@Id
-	private String id;
+	@Id private String id;
 	private String code;
 	private boolean used;
 	private Date createdOn;
@@ -21,8 +20,6 @@ public class VoucherModel {
 		model.setCode(code);
 		model.setCreatedOn(new Date());
 		model.setAmount(amount);
-		long currentTime = System.currentTimeMillis();
-
 		Calendar timer = Calendar.getInstance();
 		timer.add(Calendar.DAY_OF_MONTH,30);
 		model.setExpiresOn(timer.getTime());
